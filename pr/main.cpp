@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string x ="6546.13165224991231";
+    string x ="654613165224991.3231";
     int c =0; bool f= false;
     double result = 0;
     int comaflotante=0;
@@ -25,7 +25,7 @@ int main()
     if (!(f)){
         for(int i=c; i>0 ; i--){
         result = result + ((x[c-i]-48)*pow(10,i-1 ));
-        //cout<< ((x[c-i]-48)*pow(10,i) )<<endl;
+        cout<< ((x[c-i]-48)*pow(10,i-1) )<<endl;
         }
     cout.setf(ios::fixed);
     cout << setprecision(0) << result <<endl;
@@ -41,12 +41,11 @@ int main()
 
     double aux = 1;
     double aux2 =0;
-    for(int i=comaflotante; i< c; i++){
+    for(int i=comaflotante; i< c-1; i++){
 
        aux*=1.0/10.0;
-       cout<<aux<<"---";
        aux2=(int(x[i+1]-48.0)*aux);
-       cout<<aux2<<endl;
+       cout<<i<<endl;
        result = result + aux2;
     }
     }

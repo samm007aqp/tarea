@@ -1,6 +1,3 @@
-#include <iostream>
-
-using namespace std;
 
 void concatenar(char a[], char b[])
 {   int i=0;
@@ -26,7 +23,8 @@ char concaternar_p(char **a, char **b)
     while (*p2!='\0'){*p3= *p2; p2++;p3++; }
     while (*p!='\0'){*p3= *p; p++;p3++; }
     *p3='\0';
-    *b= p4;
+    cout<< p4 <<endl;
+   // *b= p4;
 
 }
 
@@ -34,13 +32,7 @@ int main()
 {
     char *t = "hola---";
     char *s = "sergio***";
-  //  concatenar(t,s);
+    concatenar(t,s);
     concaternar_p(&t,&s);
-  cout<<s<<endl;
+  // cout<<s<<endl;
 }
-
-
-
-
-
-

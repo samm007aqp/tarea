@@ -9,10 +9,9 @@ int tam(char a[]){
 }
  int tama(char *a)
  {
-
-    int b = 0;
-    while(*a++!='\0') b++;
-    return b;
+    char *b= a;
+    while(*a!='\0')a++;
+    return a - b ;
  }
 
 int main()
